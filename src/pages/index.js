@@ -11,11 +11,11 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header>
       <div className="container">
         <h1 className="hero__title"></h1>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ textAlign: 'left' }}>
+          <div style={{ textAlign: 'left', fontWeight: '900' }}>
             <h3>關於我以及此部落格：</h3>
             <p>
               Hi 我是 Henry，目前是一名軟體工程師，專注於前端領域。
