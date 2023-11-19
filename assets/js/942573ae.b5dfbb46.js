@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2657],{9905:e=>{e.exports=JSON.parse('{"title":"CSS","description":"CSS notes","slug":"/category/css","permalink":"/docs/category/css","navigation":{"previous":{"title":"Notes \u4ecb\u7d39","permalink":"/docs/intro"},"next":{"title":"Example","permalink":"/docs/css/01Example"}}}')}}]);
