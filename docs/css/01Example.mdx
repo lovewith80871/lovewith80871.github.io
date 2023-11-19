@@ -1,0 +1,70 @@
+import { Flex00Auto } from "./Flex00Auto/Flex00Auto.jsx";
+
+# Example
+
+### 這個頁面主要會記錄在 coding 中遇到有趣或是曾經令我困擾的問題。
+
+---
+
+### 問題一：在固定的寬度內，裡面有兩個文字區塊，第一個區塊文字長度是不固定的，第二個區塊文字長度是固定的，該怎麼設計呢？
+
+- 想法：永遠顯示第二個區塊的文字，第一個區塊的文字如果超過了，就會被隱藏起來，並且在第一個區塊的最後面加上三個...。
+
+- 效果：
+
+  <Flex00Auto> </Flex00Auto>
+
+<br />
+<details><summary>Click me show the codes</summary>
+<p>
+
+```html
+<div class="container">
+  <div class="item1">LongLongLongLongLongLongLongLong Text</div>
+  <div class="item2">Fix Width</div>
+</div>
+<style>
+  .container {
+    padding: 4px;
+    width: 300px;
+    border: 2px solid red;
+    border-radius: 10px;
+    display: flex;
+  }
+  .item1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .item2 {
+    flex: 0 0 auto; / 讓第二個區塊固定寬度/
+  }
+</style>
+```
+
+</p>
+</details>
+
+<details><summary>Click me show the reason</summary>
+<div>
+解釋：
+flex: 0 0 auto; 用於定義彈性容器（flex container）中某個項目（flex item）的彈性屬性。這個縮寫包含了三個值，分別對應 flex-grow、flex-shrink 和 flex-basis 屬性。
+
+三種屬性如下：
+
+<ul>
+<li>
+flex-grow: 0 （這表示該項目不會在剩餘空間中放大。即使其他項目具有 flex-grow 大於 0 的值，但該項目也不會佔用剩餘空間。)
+</li>
+<li>
+flex-shrink: 0 (這表示該項目不會在空間不足時縮小。即使空間不足，該項目也不會縮小。)
+</li>
+<li>
+flex-basis: auto (flex-basis 定義了項目在主軸上的初始大小。 auto 表示項目的大小由其內容決定。綜合起來，flex: 0 0 auto;的作用是使項目具有固定的初始大小，不會根據剩餘空間放大也不會在空間不足時縮小。這通常用於設定不可伸縮、不可收縮的項目。)
+</li>
+</ul>
+</div>
+
+</details>
+
+---

@@ -1,0 +1,19 @@
+.container {
+  padding: 4px;
+  width: 300px;
+  border: 2px solid red;
+  border-radius: 10px;
+  display: flex;
+}
+
+.item1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 2px solid green;
+}
+
+.item2 {
+  flex: 0 0 auto; /* 讓這裡根據內容固定寬度 */
+  border: 2px solid blue;
+}
